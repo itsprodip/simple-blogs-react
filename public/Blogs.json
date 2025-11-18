@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "cover": "https://picsum.photos/seed/book1/600/400",
+    "title": "Mastering JavaScript in 2025",
+    "author_img": "https://i.pravatar.cc/150?img=12",
+    "author": "Ariful Hasan",
+    "posted_date": "2025-02-14",
+    "reading_time": "7 min",
+    "hashtags": ["#javascript", "#webdev", "#coding"]
+  },
+  {
+    "id": 2,
+    "cover": "https://picsum.photos/seed/book2/600/400",
+    "title": "The Rise of AI Tools and How to Use Them",
+    "author_img": "https://i.pravatar.cc/150?img=5",
+    "author": "Sarah Khan",
+    "posted_date": "2025-03-02",
+    "reading_time": "5 min",
+    "hashtags": ["#ai", "#future", "#productivity"]
+  },
+  {
+    "id": 3,
+    "cover": "https://picsum.photos/seed/book3/600/400",
+    "title": "React Hooks: The Complete Beginner’s Guide",
+    "author_img": "https://i.pravatar.cc/150?img=8",
+    "author": "Jahidul Islam",
+    "posted_date": "2025-01-28",
+    "reading_time": "9 min",
+    "hashtags": ["#react", "#hooks", "#frontend"]
+  },
+  {
+    "id": 4,
+    "cover": "https://picsum.photos/seed/book4/600/400",
+    "title": "Building Scalable Backends with Django",
+    "author_img": "https://i.pravatar.cc/150?img=18",
+    "author": "Prodip Sarker",
+    "posted_date": "2025-04-10",
+    "reading_time": "11 min",
+    "hashtags": ["#django", "#backend", "#python"]
+  },
+  {
+    "id": 5,
+    "cover": "https://picsum.photos/seed/book5/600/400",
+    "title": "Why Tailwind CSS Is Taking Over Frontend",
+    "author_img": "https://i.pravatar.cc/150?img=22",
+    "author": "Nusrat Jahan",
+    "posted_date": "2025-04-01",
+    "reading_time": "6 min",
+    "hashtags": ["#tailwind", "#css", "#design"]
+  }
+]
