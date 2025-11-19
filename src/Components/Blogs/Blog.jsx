@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FaRegBookmark } from "react-icons/fa";
 const Blog = ({blog}) => {
     // console.log(blog);
     const {id,cover,title,author_img,author,posted_date : date, reading_time : time,hashtags : tags} =blog;
@@ -7,11 +7,17 @@ const Blog = ({blog}) => {
       <div>
         <div className="card bg-base-100 w-96 shadow-sm">
           <figure>
-            <img
-              src={cover}
-              alt="Shoes"
-            />
+            <img src={cover} alt="Shoes" />
           </figure>
+          <div className='flex justify-between items-center'>
+            <div className="author flex space-x-3 mt-3 ml-3 items-center">
+              <img className="w-10 rounded-full " src={author_img} alt="" />
+              <h3 className='font-semibold text-gray-600'>{author}</h3>
+            </div>
+            <div>
+              <FaRegBookmark size={20} className='cursor-pointer mr-3'/>
+            </div>
+          </div>
           <div className="card-body">
             <h2 className="card-title">{title}</h2>
             <p>
