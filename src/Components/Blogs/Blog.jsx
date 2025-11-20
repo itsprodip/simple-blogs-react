@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaRegBookmark } from "react-icons/fa";
-const Blog = ({ blog, handleBookmark}) => {
+const Blog = ({ blog, handleBookmark, handleMarkAsRead }) => {
   const {
     id,
     cover,
@@ -22,8 +22,9 @@ const Blog = ({ blog, handleBookmark}) => {
             <img className="w-10 rounded-full " src={author_img} alt="" />
             <h3 className="font-semibold text-gray-600">{author}</h3>
           </div>
-          <div>
-            <button onClick={()=>handleBookmark(blog)}>
+          <div className="flex space-x-2 ">
+            <h3 className="text-sm">{time} read</h3>
+            <button onClick={() => handleBookmark(blog)}>
               <FaRegBookmark size={20} className="cursor-pointer mr-3" />
             </button>
           </div>
@@ -35,7 +36,9 @@ const Blog = ({ blog, handleBookmark}) => {
             are title and actions parts
           </p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Mark as read</button>
+            <button onClick={()=>handleMarkAsRead(blog)} className="btn btn-primary">
+              Mark as read
+            </button>
           </div>
         </div>
       </div>
