@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaRegBookmark } from "react-icons/fa";
+import { FaBookmark } from "react-icons/fa";
 const Blog = ({ blog, handleBookmark, handleMarkAsRead }) => {
   const {
     id,
@@ -11,6 +12,17 @@ const Blog = ({ blog, handleBookmark, handleMarkAsRead }) => {
     reading_time: time,
     hashtags: tags,
   } = blog;
+
+  const [ReadMark,setReadMark]=useState(false);
+  const [toggleBookMark,setToggleBookMark]=useState(false);
+  const handleReadMark=()=>{
+      setReadMark(true);
+      
+  }
+
+const handleToggleBookMark=()=>{
+  setToggleBookMark(true);
+}
   return (
     <div>
       <div className="card bg-base-100 w-96 shadow-sm">
@@ -24,8 +36,18 @@ const Blog = ({ blog, handleBookmark, handleMarkAsRead }) => {
           </div>
           <div className="flex space-x-2 ">
             <h3 className="text-sm">{time} read</h3>
-            <button onClick={() => handleBookmark(blog)}>
-              <FaRegBookmark size={20} className="cursor-pointer mr-3" />
+            <button
+              disabled={(toggleBookMark, ReadMark)}
+              onClick={() => {
+                handleBookmark(blog);
+                handleToggleBookMark();
+              }}
+            >
+              {!toggleBookMark ? (
+                <FaRegBookmark size={20} className="cursor-pointer mr-3" />
+              ) : (
+                <FaBookmark size={20} className="cursor-pointer mr-3" />
+              )}
             </button>
           </div>
         </div>
@@ -36,8 +58,15 @@ const Blog = ({ blog, handleBookmark, handleMarkAsRead }) => {
             are title and actions parts
           </p>
           <div className="card-actions justify-end">
-            <button onClick={()=>handleMarkAsRead(blog)} className="btn btn-primary">
-              Mark as read
+            <button
+              disabled={ReadMark}
+              onClick={() => {
+                handleMarkAsRead(blog);
+                handleReadMark();
+              }}
+              className="btn btn-primary"
+            >
+              {ReadMark ? "Marked" : "Mark as read"}
             </button>
           </div>
         </div>
